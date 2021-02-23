@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>pelisplus</title>
+  <link rel="icon"
+    href="data:image/jpeg;base64,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">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid d-flex flex-row-reverse bd-highlight  ">
+      <!-- <a class="navbar-brand" href="#">VentaExpress</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse row " id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item  col-lg-3">
+            <a class="nav-link active" aria-current="page" href="#">pelisplus</a>
+          </li>
+          <li class="nav-item col-lg-2">
+            <a class="nav-link" href="#peliculas">Peliculas</a>
+          </li>
+          <li class="nav-item col-lg-2 ">
+            <a class="nav-link" href="#series">Series</a>
+          </li>
+          <li class="nav-item col-lg-2 ">
+            <a class="nav-link" href="#favoritos">Favoritos</a>
+          </li>
+          <li class="nav-item col-lg-2 logged-out">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Ingresar</a>
+          </li>
+          <li class="nav-item col-lg-2 logged-out">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrar</a>
+          </li>
+          <li class="nav-item logged-in">
+            <a class="nav-link" href="#" id="logout">Salir</a>
+          </li>
+
+          <!--<li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
+              </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- Modal REGISTRO-->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="signup-form">
+            <div class="form-group">
+              <input type="text" id="signup-email" class="form-control" placeholder="Mail" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="signup-password" class="form-control" placeholder="Contraseña, al menos 6 caracteres " required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrate</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal INGRESO-->
+  <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ingreso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+              <input type="text" id="login-email" class="form-control" placeholder="Mail" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="login-password" class="form-control" placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">
+              Ingresa
+            </button>
+            <!--   <button type="button" class="btn btn-info" id="googleLogin">
+                Ingresa con google
+              </button>-->
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!---searchbox-->
+
+  <nav class="navbar navbar-dark bg-dark searchbox mt-5">
+    <div class="container-fluid d-flex justify-content-center">
+      <form class="d-flex search_box col-12 col-lg-6">
+        <input id="inputSearch" class="form-control  search-input" type="search" placeholder="Buscar"
+          aria-label="Search">
+        <button id="search" class="btn btn-primary search " onclick="localSearch()" type="button"><i
+            class="fas fa-search icono"></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <!--carrousel-->
+  <div class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/croods.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+           <!-- <button class="btn btn-primary" data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>
+          -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/soul.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+           <!-- <button class="btn btn-primary " data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>
+   -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/img/wonder.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <!-- <button class="btn btn-primary" data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>
+            -->
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+  <!--contenido principal Peliculas firestore-->
+  <div class="row row-cols-1 row-cols-md-3 g-4 p-4 pelis" id="peliculas">
+    
+  </div>
+  <!--contenido principal Peliculas objeto-->
+  <div class="row row-cols-1 row-cols-md-3 g-4 p-4 pelis2" id="peliculas2">
+    
+  </div>
+  <!--contenido principal Series-->
+
+  <div class="row row-cols-1 row-cols-md-3 g-4 p-4 series" id="series">
+
+  </div>
+
+    <!--favoritoss-->
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 p-4 series" id="favoritos">
+  <h1>favori</h1>
+    </div>
+  
+  <!--FOOter-->
+  <footer class="container-fluid border">
+    <div class="row">
+      <div class="col-lg-6 p-3 text-center">
+        <h3 class="text-light  text-center">PelisPlus</h3>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Hacenos una sugerencia
+          </button>
+         
+      </div>
+      <div class="col-lg-6 text-center text-light p-3">
+        <h4>seguinos</h4>
+        <i class="fab fa-facebook-f text-light p-3"></i>
+        <i class="fab fa-twitter text-light"></i>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </footer>
+
+
+<!---->
+  <!--scripts------------------------------------>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+ <!--firebase script-->
+  <!-- 
+El SDK de Firebase JS principal siempre es obligatorio y debe figurar primero -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+  <!-- TODO: Agrega SDK para los productos de Firebase que quieras usar. esto se encuentra en google buscando firebase cdn -->
+     <!-- accede al autenticador-->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+  <!--para acceder a la base de datos-->
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+
+
+
+  <script>
+    // La configuración de Firebase de su aplicación web
+
+    var firebaseConfig = {
+      apiKey: "AIzaSyDDP-0yFrWVvlWGX7vzSD_QKn4gECniqGo",
+      authDomain: "pelis-beafa.firebaseapp.com",
+      projectId: "pelis-beafa",
+      storageBucket: "pelis-beafa.appspot.com",
+      messagingSenderId: "981161939684",
+      appId: "1:981161939684:web:ff372406ade7bc7f3d12f1"
+    };
+    // inicializar Firebase
+    firebase.initializeApp(firebaseConfig);
+    //firebase.auth() valida los datos que le envio
+    const auth = firebase.auth();
+    // uso la constante fs para interactuar con firestore()
+    const fs = firebase.firestore();
+  </script>
+
+
+
+
+  <!--scripts-JS----------------------------------->
+<script type="module" src="./js/episodios.js"></script>
+<script type="module" src="./js/video.js"></script>
+<script type="module" src="./js/favoritos.js"></script>
+<script type="module" src="./js/historicoUsuario.js"></script>
+<script type="module" src="./js/membresia.js"></script>
+<script type="module" src="./js/pago.js"></script>
+<script type="module" src="./js/peliculas.js"></script>
+<script type="module" src="./js/usuario.js"></script>
+<script type="module" src="./js/temporadas.js"></script>
+<script type="module" src="./js/series.js"></script>
+<script type="module" src="./js/VideoPlayer.js"></script>
+<script type="module" src="./js/domSerie.js"></script>
+<script type="module" src="./js/promesa.js"></script>
+<script type="module" src="./js/registro.js"></script>
+
+
+
+
+
+</body>
+</html>
