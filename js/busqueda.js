@@ -12,4 +12,4 @@ document.addEventListener("keyup", (e) =>{
 })
 }
 //en el card-filter que es el imput va a buscar el contenido de todos los que tengan clase card1
-searchFilters(".card-filter",".tarjeta");
+searchFilters(".card-filter",".tarj");

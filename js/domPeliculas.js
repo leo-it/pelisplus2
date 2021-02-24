@@ -12,7 +12,7 @@ export class DomPeliculas{
           const pelicula = doc.data();
          // console.log(pelicula)
           const div = `
-          <div class="col">
+          <div class="col tarj">
           <div class="card tarjeta">
             <img src="${pelicula.img}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -22,11 +22,11 @@ export class DomPeliculas{
 
         
               <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPeli${pelicula.id}">
-              ver
+              Ver Pelicula
             </button>
     
-            <!--  <a   class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPeli${pelicula.id} id="" >VER</a> -->
-               <button type="btnFavorito" id="fav" name="verPeli" class="btn btn-secondary">Favoritos</button>
+            <!--  <a   class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPeli${pelicula.id} id="" >VER Pelicula</a> -->
+            <!-- <button type="btnFavorito" id="fav" name="verPeli" class="btn btn-secondary">Favoritos</button> -->
                </div>
            </div>
            </div>
@@ -104,7 +104,7 @@ export class DomPeliculas{
              for(let peli of arrayPeliculas){
         //console.log(peli);
                const divPelis2 = `
-               <div class="col card1">
+               <div class="col tarj">
                <div class="card tarjeta">
                  <img src="${peli.img}" class="card-img-top" alt="...">
                  <div class="card-body">
@@ -113,11 +113,11 @@ export class DomPeliculas{
                    <p class="card-text">Descripcion: ${peli.descripcion}</p>
 
                 <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPeli${peli.id}">
-                ver
+                Ver Pelicula
               </button>
         
                 <!--  <a   class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalPeli${peli.id} id="" >VER</a> -->
-               <button type="btnFavorito" id="fav" name="verPeli" class="btn btn-secondary">Favoritos</button>
+                <!--<button type="btnFavorito" id="fav" name="verPeli" class="btn btn-secondary">Favoritos</button>-->
                </div>
            </div>
            </div>
@@ -177,7 +177,56 @@ export class DomPeliculas{
                  
                   };
 
-
+                  renderizarcarrusel(){
+                    let pelisRend  =document.querySelector(".carru")
+                
+                      let htmlPeli2 = `  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="img/croods.jpg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                           <!-- <button class="btn btn-primary" data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>
+                          -->
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/soul.jpeg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                           <!-- <button class="btn btn-primary " data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>-->
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/wonder.jpg" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <!-- <button class="btn btn-primary" data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>
+                            -->
+                          </div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </a>
+                    </div>`;
+                      pelisRend.innerHTML = htmlPeli2;
+                
+                     
+                      };
 
       
     }

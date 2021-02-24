@@ -56,6 +56,8 @@ signInForm.addEventListener("submit", (e) => {
     signInForm.reset();
     // cerrar el modal
     $("#signinModal").modal("hide");
+    document.location.reload()
+
   });
 });
 
@@ -81,6 +83,8 @@ auth.onAuthStateChanged((user) => { //desde auth voy a usar un metodo onauth que
         peli1.renderizarVacio();
        // rendSerie.renderizarVacio();
         peli1.renderizarVacioPeli();
+        peli1.renderizarcarrusel();
+
    /* //setupPelis([]);
    // setupSeries([]);
    rendSerie.renderizarSeries([]);
