@@ -209,8 +209,8 @@ export class DomPeliculas{
                           <div class="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                            <!-- <button class="btn btn-primary" data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>
-                            -->
+                            <button class="btn btn-primary" data-bs-target="#signinModal" data-bs-toggle="modal">Ingresa</button>
+                            
                           </div>
                         </div>
                       </div>
