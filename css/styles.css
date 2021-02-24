@@ -44,3 +44,8 @@ h3 {
     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
 }
 /*footer end*/
+
+
+.filter {
+    display: none;
+}

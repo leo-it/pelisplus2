@@ -48,8 +48,7 @@ export class DomPeliculas{
               
                               </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="">Descripcion</button>
-                            <button type="button" class="btn btn-primary"><i class="fas fa-thumbs-up"></i></button>
+                          <p class="card-text text-center mx-auto">descripcion: ${pelicula.descripcion}</p>                            <button type="button" class="btn btn-primary"><i class="fas fa-thumbs-up"></i></button>
                           </div>
                         </div>
                       </div>
@@ -105,7 +104,7 @@ export class DomPeliculas{
              for(let peli of arrayPeliculas){
         //console.log(peli);
                const divPelis2 = `
-               <div class="col">
+               <div class="col card1">
                <div class="card tarjeta">
                  <img src="${peli.img}" class="card-img-top" alt="...">
                  <div class="card-body">
@@ -140,8 +139,9 @@ export class DomPeliculas{
               
                               </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="">Descripcion</button>
-                            <button type="button" class="btn btn-primary"><i class="fas fa-thumbs-up"></i></button>
+                          
+                          <p class="card-text text-center mx-auto">descripcion: ${peli.descripcion}</p>         
+                          <button type="button" class="btn btn-primary"><i class="fas fa-thumbs-up"></i></button>
                           </div>
                         </div>
                       </div>
